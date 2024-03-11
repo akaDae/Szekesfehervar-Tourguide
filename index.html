@@ -1,0 +1,329 @@
+<!Doctype html>
+<html lang="en">
+
+<head>
+  <!-- Meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.104.2">
+  <title>Szekesfehervar Tour Guide</title>
+  <link rel="icon" type="image/x-icon" href="/images/favicon-32x32.png">
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/carousel/">
+  <!-- Bootstrap CSS -->
+  <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="css/styles.css" rel="stylesheet">
+  <!-- Inline styles -->
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+
+    .b-example-divider {
+      height: 3rem;
+      background-color: rgba(0, 0, 0, .1);
+      border: solid rgba(0, 0, 0, .15);
+      border-width: 1px 0;
+      box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+    }
+
+    .b-example-vr {
+      flex-shrink: 0;
+      width: 1.5rem;
+      height: 100vh;
+    }
+
+    .bi {
+      vertical-align: -.125em;
+      fill: currentColor;
+    }
+
+    .nav-scroller {
+      position: relative;
+      z-index: 2;
+      height: 2.75rem;
+      overflow-y: hidden;
+    }
+
+    .nav-scroller .nav {
+      display: flex;
+      flex-wrap: nowrap;
+      padding-bottom: 1rem;
+      margin-top: -1px;
+      overflow-x: auto;
+      text-align: center;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+    }
+  </style>
+</head>
+
+<body style="padding-top: 0;">
+  <div id="wrapper">
+    <!-- Only Style 2 scrollbar -->
+    <div class="scrollbar" id="style-2">
+      <div class="force-overflow"></div>
+    </div>
+  </div>
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+      <div class="container-fluid">
+        <!-- Replace text with image -->
+        <a class="navbar-brand" href="#">
+          <img src="images/logo.png" width="40" height="40" class="d-inline-block align-top" alt="Logo">
+        </a>
+        <!-- End of logo -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between align-items-center" id="navbarCollapse">
+          <ul class="navbar-nav mb-2 mb-md-0 text-center">
+            <!-- Navigation links -->
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#events">Events</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#attractions">Attractions</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#map">Map</a>
+            </li>
+          </ul>
+          <!-- Dropdown menu added on the right -->
+          <ul class="navbar-nav align-items-center">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <img src="images/en.png" width="25" height="15" alt="English Flag">
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end align-items-center" aria-labelledby="languageDropdown">
+                <li>
+                  <a class="dropdown-item" href="#">
+                    <i class="flag-united-kingdom flag"></i>English
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">
+                    <i class="flag-hungary flag"></i>Magyar
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <!-- End of dropdown menu -->
+        </div>
+      </div>
+    </nav>
+  </header>
+  <script>
+    // JavaScript for navbar scrolling effect
+    window.addEventListener('scroll', function () {
+      const navEl = document.querySelector('.navbar');
+      if (window.scrollY > 20) {
+        navEl.classList.add('navbar-scrolled');
+      } else {
+        navEl.classList.remove('navbar-scrolled');
+      }
+    });
+  </script>
+  <main>
+    <!-- Carousel -->
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+      <!-- Carousel Indicators -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+          aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <!-- Carousel Inner -->
+      <div class="carousel-inner">
+        <!-- Carousel Items -->
+        <div class="carousel-item active">
+          <img src="images/image2.jpg" class="d-block w-100" alt="First slide">
+          <div class="container">
+            <div class="carousel-caption text-start">
+              <h1>Saint Stephen Cathedral</h1>
+              <p>Explore one of the most significant historical landmarks in Székesfehérvár, known for its stunning
+                architecture.</p>
+              <p><a class="btn btn-lg btn-primary"
+                  href="https://www.google.com/maps/place/%CE%92%CE%B1%CF%83%CE%B9%CE%BB%CE%B9%
+
+CE%BA%CE%AE+%CE%91%CE%B3%CE%AF%CE%BF%CF%85+%CE%A3%CF%84%CE%B5%CF%86%CE%AC%CE%BD%CE%BF%CF%85/@47.5009495,19.0538438,21z/">Open on maps</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/image1.jpg" class="d-block w-100" alt="Second slide">
+          <div class="container">
+            <div class="carousel-caption text-start">
+              <h1>Bory Castle</h1>
+              <p>Visit the unique architectural masterpiece built by the Hungarian architect and sculptor Jenő Bory.</p>
+              <p><a class="btn btn-lg btn-primary" href="#">Open on maps</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/image3.jpg" class="d-block w-100" alt="Third slide">
+          <div class="container">
+            <div class="carousel-caption text-start">
+              <h1>Alba Regia Historical Theme Park</h1>
+              <p>Experience the history of Székesfehérvár and its surroundings in this interactive theme park.</p>
+              <p><a class="btn btn-lg btn-primary"
+                  href="https://www.google.com/maps/search/Alba+Regia+Historical+Theme+Park/@47.3070195,18.2283132,20.47z?entry=ttu">Open
+                  on maps</a></p>
+            </div>
+          </div>
+        </div>
+        <!-- Carousel Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Events Section -->
+    <section id="events">
+      <h1 class="text-center">Events</h1>
+      <br>
+      <!-- Event Cards -->
+      <div class="container marketing">
+        <div class="row">
+          <div class="col-lg-4">
+            <!-- Event Card 1 -->
+            <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="images/image1.1.jpg"
+              alt="Image">
+            <h2 class="fw-normal">Mug tour on Sóstó</h2>
+            <p>2024th. January 27. 10:15 |
+              Bring your favorite mug to this light tour and taste it from station to station in the wonderful taste of
+              the beneficial herbs that also occur on Sóstó.</p>
+            <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+          </div>
+          <div class="col-lg-4">
+            <!-- Event Card 2 -->
+            <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="images/image2.2.jpg"
+              alt="Image">
+            <h2 class="fw-normal">Spring waiting walk</h2>
+            <p>2024th. March 09. 10:00 |
+              With the arrival of spring, we feel the renewal in our guts, we long for the outdoors.
+              The parks, lakes and streams in the city offer recharging and great relaxation, so on our next Saturday
+              walk we will prepare an unusual nature guide. </p>
+            <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+          </div>
+          <div class="col-lg-4">
+            <!-- Event Card 3 -->
+            <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="images/image3.3.jpg"
+              alt="Image">
+            <h2 class="fw-normal">Solium regni - The throne of the country is a permanent exhibition</h2>
+            <p>One of the newest exhibition spaces in Székesfehérvár preserves the unique past of the city in a dazzling
+              interior. A venue not worth missing! </p>
+            <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Attractions Section -->
+    <section id="attractions">
+      <hr class="featurette-divider">
+      <!-- Featurette 1 -->
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading fw-normal lh-1">On the path of kings </h2>
+          <p class="lead">Did you know that in medieval Hungary one could only be the rightful monarch if the Archbishop
+            of Esztergom placed the crown of St. Stephen I on their head in Székesfehérvár? We can follow the footsteps
+            of our kings. Let’s open the history book of our country together!</p>
+        </div>
+        <div class="col-md-5">
+          <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+            src="images/image1.1.1.jpg" alt="Placeholder image" width="500" height="500"
+            aria-label="Placeholder: 500x500" role="img">
+        </div>
+      </div>
+      <hr class="featurette-divider">
+      <!-- Featurette 2 -->
+      <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+          <h2 class="featurette-heading fw-normal lh-1">Romantic Székesfehérvár </h2>
+          <p class="lead">Do you fancy a lulling stroll amongst the baroque, rococo and Louis Seize style buildings by
+            the sparkling fountains of the High Street? Would you like even more? Discover the fort of romance, a castle
+            of a 20th century cavalier, the most peculiar building of the city! The Bory Castle!</p>
+        </div>
+        <div class="col-md-5 order-md-1">
+          <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+            src="images/image2.2.2.jpg" alt="Placeholder image" width="500" height="500"
+            aria-label="Placeholder: 500x500" role="img">
+        </div>
+      </div>
+      <hr class="featurette-divider">
+      <!-- Featurette 3 -->
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading fw-normal lh-1">Osztály
+
+            kirándulás a Sóstón</h2>
+          <p class="lead">Sóstó, located in the embrace of the big city, gives the class the opportunity to discover an
+            unmissable historical site and a special and unique natural experience on a trip.</p>
+        </div>
+        <div class="col-md-5">
+          <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+            src="images/image3.3.3.jpg" alt="Placeholder image" width="500" height="500"
+            aria-label="Placeholder: 500x500" role="img">
+        </div>
+      </div>
+      <hr class="featurette-divider">
+    </section>
+    <!-- Map Section -->
+    <section id="map1">
+      <div id="map"></div>
+      <script>
+        // Initialize Google Map
+        function initMap() {
+          var szekesfehervar = { lat: 47.1885, lng: 18.4089 };
+          var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 12,
+            center: szekesfehervar
+          });
+          var marker = new google.maps.Marker({
+            position: szekesfehervar,
+            map: map
+          });
+        }
+      </script>
+      <!-- Google Maps API -->
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDouUS2uh09j5Dm86Dpjde6yA7vBibLm-Y&callback=initMap"></script>
+    </section>
+    <br>
+    <!-- Footer -->
+    <footer class="container">
+      <p class="float-end"><a href="#">Back to top</a></p>
+      <p>&copy; 2024 Made with <3 by Angelos and Alex &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a>
+      </p>
+    </footer>
+  </main>
+  <!-- Bootstrap Bundle JS -->
+  <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
